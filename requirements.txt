@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+
+sqlalchemy
+alembic
+psycopg2-binary
+
+pydantic[email]
+email-validator
+
+passlib[bcrypt]
+
+python-dotenv
+
+supabase
