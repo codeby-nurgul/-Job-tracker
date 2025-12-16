@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Routes, Route, Navigate } from "react-router";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/JobsPage";
+import "./App.css"
+const isAuth = () => !!localStorage.getItem("access_token");
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
- <h1>Hello</h1>
-    </>
-  )
-}
+    <div className="container">
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
-export default App
+        <Route
+          path="/"
+          element={isAuth() ? <Dashboard /> : <Navigate to="/login" />}
+        />
+      </Routes>
+    </div>
+  );
+}

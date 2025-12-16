@@ -1,0 +1,56 @@
+.joblist-wrapper {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.joblist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.joblist-table thead {
+  background: #f3f4f6;
+}
+
+.joblist-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.joblist-table td {
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.applied { background: #e0e7ff; color: #3730a3; }
+.status-badge.interview { background: #ecfeff; color: #155e75; }
+.status-badge.offer { background: #dcfce7; color: #166534; }
+.status-badge.rejected { background: #fee2e2; color: #991b1b; }
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.delete-btn:hover { background: #fee2e2; }

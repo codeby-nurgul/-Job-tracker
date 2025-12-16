@@ -1,0 +1,35 @@
+.job-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 980px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.job-page-title {
+  text-align: center;
+  margin: 10px 0 6px;
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.view-toggle button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-toggle button.active {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+}

@@ -1,0 +1,126 @@
+/* BOARD */
+.kanban-board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* COLUMN BASE */
+.kanban-column {
+  border-radius: 14px;
+  padding: 12px;
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid transparent;
+}
+
+/* APPLIED – sakin mavi */
+.kanban-column.applied {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+/* INTERVIEW – turkuaz */
+.kanban-column.interview {
+  background: #ecfeff;
+  border-color: #67e8f9;
+}
+
+/* OFFER – yeşil (başarı) */
+.kanban-column.offer {
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+}
+
+/* REJECTED – kırmızı (uyarı) */
+.kanban-column.rejected {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* COLUMN HEADER */
+.kanban-column-header {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* HEADER COLORS */
+.kanban-column.applied .kanban-column-header {
+  color: #3730a3;
+}
+
+.kanban-column.interview .kanban-column-header {
+  color: #155e75;
+}
+
+.kanban-column.offer .kanban-column-header {
+  color: #166534;
+}
+
+.kanban-column.rejected .kanban-column-header {
+  color: #991b1b;
+}
+
+/* COUNT */
+.kanban-count {
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* COLUMN BODY */
+.kanban-column-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CARD */
+.kanban-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: grab;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.kanban-card:active {
+  cursor: grabbing;
+}
+
+/* CARD CONTENT */
+.kanban-card-title {
+  font-weight: 700;
+  color: #111827;
+}
+
+.kanban-card-sub {
+  margin-top: 4px;
+  color: #374151;
+  font-size: 13px;
+}
+
+.kanban-card-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .kanban-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+}
