@@ -3,6 +3,7 @@ from app.routers.auth import router as auth_router
 from app.routers.users_router import router as users_router
 from app.routers.jobs import router as jobs_router
 from app.routers.dashboard import router as dashboard_router
+from app.routers import profile
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Job Tracker API")
@@ -22,6 +23,7 @@ app.include_router(auth_router)
 app.include_router(users_router)
 app.include_router(jobs_router)
 app.include_router(dashboard_router)
+app.include_router(profile.router)
 
 @app.get("/")
 def root():
